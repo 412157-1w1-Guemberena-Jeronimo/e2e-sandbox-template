@@ -13,11 +13,11 @@ suites:
     points: 40
     scoring: proportional
     select:
-      classes: ["SumaParesTest"]
+      classes: ["ar.edu.utn.SumaParesTest"]
 
   - id: ocultos
     name: "Tests ocultos"
     points: 60
     scoring: all_or_nothing
     select:
-      classes: ["ReservadosTest"]
+      classes: ["ar.edu.utn.ReservadosTest"]
