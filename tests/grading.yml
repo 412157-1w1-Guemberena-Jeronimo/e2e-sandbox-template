@@ -1,0 +1,23 @@
+# grading.yml: va dentro de la carpeta tests_path (ej: tests/grading.yml) en la rama `tests`
+
+schemaVersion: 1
+profile: java21-junit
+image: maven:3.9-eclipse-temurin-21
+limits:
+  timeoutSec: 120
+  memoryMb: 1024
+
+suites:
+  - id: publicos
+    name: "Tests públicos"
+    points: 40
+    scoring: proportional
+    select:
+      classes: ["SumaParesTest"]
+
+  - id: ocultos
+    name: "Tests ocultos"
+    points: 60
+    scoring: all_or_nothing
+    select:
+      classes: ["ReservadosTest"]
